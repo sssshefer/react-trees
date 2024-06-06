@@ -7,8 +7,6 @@ This project is a React application that visualizes a family tree using the `rea
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Running the App](#running-the-app)
-- [Known Issues](#known-issues)
 - [How to Use Queue Data Structure in JavaScript](#how-to-use-queue-data-structure-in-javascript)
   - [Understanding the Methods](#understanding-the-methods)
 - [Breadth-First Search (BFS) in JavaScript](#breadth-first-search-bfs-in-javascript)
@@ -30,27 +28,18 @@ This project is a React application that visualizes a family tree using the `rea
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/family-tree-visualization.git
+    git clone https://github.com/sssshefer/react-trees.git
     ```
 2. Install dependencies:
     ```sh
-    cd family-tree-visualization
+    cd react-trees
     npm install
     ```
 3. Start the development server:
     ```sh
     npm start
     ```
-
-## Running the App
-
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-## Known Issues
+  Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 > [!CAUTION]
 > Having the same name in a tree doesn't work well
@@ -66,6 +55,6 @@ A queue is a fundamental data structure in computer science that follows the Fir
 - **`unshift(element)`**: Adds an element to the beginning of the array. Although not used in this queue implementation, it is worth mentioning as it can be useful in other scenarios where you need to add elements to the front.
 - **`pop()`**: Removes the last element from the array and returns it. This is also not used in this queue implementation but is commonly used in stack data structures.
 
-## Breadth-First Search (BFS) in JavaScript
+## Breadth-First Search (BFS)
 
 Breadth-First Search (BFS) is a fundamental algorithm for traversing or searching tree or graph data structures. Starting at the root (or an arbitrary node in the case of a graph), BFS explores the neighbor nodes at the present depth prior to moving on to nodes at the next depth level. This algorithm is particularly useful for finding the shortest path in an unweighted graph.
