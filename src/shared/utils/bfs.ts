@@ -1,21 +1,16 @@
 import {RawNodeDatum} from "react-d3-tree";
 
 //Breath-first Search
-export function bfs(name: string|undefined, tree: RawNodeDatum | RawNodeDatum[], newNodeName: string) {
+export function bfs(selectedNodeName: string | undefined, tree: RawNodeDatum | RawNodeDatum[], newNodeName: string) {
     const queue: RawNodeDatum[] = []
 
     queue.unshift(tree as RawNodeDatum)
 
     while (queue.length > 0) {
-        const curNode = queue.pop();
-
-        if (curNode?.name === name) {
-            curNode?.children?.push(
-                {
-                    name:newNodeName,
-                    children: []
-                });
-            return {...tree}
+        let curNode = queue.pop();
+        if (curNode?.name === selectedNodeName) {
+            curNode = addNode(curNode, newNodeName)
+            return {...tree, curNode}
         }
 
         const len = curNode?.children?.length || 0;
@@ -23,4 +18,13 @@ export function bfs(name: string|undefined, tree: RawNodeDatum | RawNodeDatum[],
             queue.unshift(curNode?.children?.[i] as RawNodeDatum)
         }
     }
+}
+
+function addNode(node: RawNodeDatum | undefined, newNodeName: string) {
+    node?.children?.push(
+        {
+            name: newNodeName,
+            children: []
+        });
+    return node;
 }
