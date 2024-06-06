@@ -1,6 +1,6 @@
 import {RawNodeDatum} from "react-d3-tree";
 
-//Breath-first Search
+//Breadth-first Search
 export function bfs(selectedNodeName: string | undefined, tree: RawNodeDatum | RawNodeDatum[], newNodeName: string) {
     const queue: RawNodeDatum[] = []
 
