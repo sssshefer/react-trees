@@ -1,4 +1,4 @@
-# Family Tree Visualization
+# <img src="https://github.com/sssshefer/react-trees/assets/63253440/d83ae1e6-26ce-49e4-90c5-5a1af663b453" width="24"> Family Tree Visualization
 
 This project is a React application that visualizes a family tree using the `react-d3-tree` library. Users can dynamically add new family members to the tree through a modal interface. The tree is rendered with D3 and allows interactive exploration of family relationships.
 
