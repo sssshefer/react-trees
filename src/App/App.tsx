@@ -11,14 +11,12 @@ function App() {
         children: []
     })
 
-    const [node, setNode] = useState<undefined | TreeNodeDatum>(undefined);
+    const [selectedNode, setSelectedNode] = useState<undefined | TreeNodeDatum>(undefined);
 
-    const close = () => {
-        setNode(undefined);
-    }
+    const closeAddNewNodeModal = () => setSelectedNode(undefined);
 
     const handleSubmit = (name: string) => {
-        const newTree = bfs(node?.name, treeData, name)
+        const newTree = bfs(selectedNode?.name, treeData, name)
 
         if(newTree){
             setTreeData(newTree)
@@ -28,12 +26,12 @@ function App() {
         <Box h="100vh" w="100vw">
             <Tree
                 data={treeData}
-                onNodeClick={(node) => setNode(node.data)}
+                onNodeClick={(node) => setSelectedNode(node.data)}
                 translate={{x: 200, y: 200}}
             />
             <AddFamilyMemberModal
-                isOpen={Boolean(node)}
-                onClose={() => close()}
+                isOpen={Boolean(selectedNode)}
+                onModalClose={() => closeAddNewNodeModal()}
                 onSubmit={handleSubmit}
             />
         </Box>

@@ -12,15 +12,15 @@ import {
 
 interface AddFamilyMemberModalProps {
     isOpen: boolean;
-    onClose: () => void;
+    onModalClose: () => void;
     onSubmit: (familyMemberName: string) => void;
 }
 
-const AddFamilyMemberModal: FC<AddFamilyMemberModalProps> = ({isOpen, onClose, onSubmit}) => {
+const AddFamilyMemberModal: FC<AddFamilyMemberModalProps> = ({isOpen, onModalClose, onSubmit}) => {
     const [name, setName] = useState('');
 
     return (
-        <Modal isOpen={isOpen} onClose={onClose}>
+        <Modal isOpen={isOpen} onClose={onModalClose}>
             <ModalOverlay/>
             <ModalContent>
                 <ModalHeader> Add family member </ModalHeader>
@@ -38,7 +38,7 @@ const AddFamilyMemberModal: FC<AddFamilyMemberModalProps> = ({isOpen, onClose, o
                         disabled={!name}
                         onClick={() => {
                             onSubmit(name);
-                            onClose()
+                            onModalClose()
                         }}
                     >Add</Button>
                 </ModalFooter>
