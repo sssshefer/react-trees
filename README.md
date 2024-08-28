@@ -9,13 +9,16 @@ This project is a React application that visualizes a family tree using the `rea
 - [Installation](#installation)
 - [How to Use Queue Data Structure in JavaScript](#how-to-use-queue-data-structure-in-javascript)
   - [Understanding the Methods](#understanding-the-methods)
-- [Breadth-First Search (BFS) in JavaScript](#breadth-first-search-bfs-in-javascript)
+- [Breadth-First Search (BFS) in JavaScript](breadth-first-search-bfs)
 
 ## Features
 
 - **Interactive Family Tree**: Visualize family relationships with an interactive tree structure.
 - **Add Family Members**: Easily add new family members to the tree using a modal form.
 - **Breadth-First Search**: Efficiently update the tree structure using the BFS algorithm to find the correct insertion point.
+
+![Screenshot 2024-08-28 180311](https://github.com/user-attachments/assets/dde74279-18ad-4f12-8814-cfa465f5f8e7)
+
 
 ## Technologies Used
 
